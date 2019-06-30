@@ -13,20 +13,14 @@ server.use(cors())
 
 const tshirtRoutes = require('./Routes/tshirtRoutes')
 const categoryRoutes = require('./Routes/categoryRoutes')
+const userRoutes = require('./Routes/userRoutes')
+const commentsRoutes = require('./Routes/commentsRoutes')
 
 server.use('/tshirts', tshirtRoutes)
 server.use('/category', categoryRoutes)
-
-
-// const projectsRoutes = require('./Routes/projectsRoutes')
-// const actionsRoutes = require('./Routes/actionsRoutes')
-
-// server.use('/projects', projectsRoutes)
-// server.use('/actions', actionsRoutes)
-
+server.use('/users', userRoutes)
+server.use('/comments', commentsRoutes)
 
 const port = process.env.PORT || 4000
 
 server.listen(port, () => console.log(`server running on port ${port}`));
-
-

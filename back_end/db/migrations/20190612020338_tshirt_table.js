@@ -48,6 +48,14 @@ exports.up = function(knex, Promise) {
       .integer('instock_large')
       .notNullable()
 
+    tbl
+      .string('material')
+      .notNullable()
+
+    tbl
+      .integer('total_likes')
+      .defaultTo(0)
+
   })
 };
 

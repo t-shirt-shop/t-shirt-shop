@@ -52,20 +52,4 @@ router.get('/:id', (req, res) => {
 
 })
 
-//UPDATE
-//update a category
-//-------------------------------------------
-router.put('/id', (req, res) => {
-	const {id} = req.params;
-	db('category')
-		.where({id})
-		.then(response => {
-			res.status(200).json(response)
-		})
-		.catch(error => {
-			res.status(500).json(error)
-		})
-})
-
-
 module.exports = router;
