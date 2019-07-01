@@ -1,8 +1,15 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+
 
 function Nav() {
     return (
-        <h1>Nav testing</h1>
+        <div>
+            
+            <div> <FontAwesomeIcon icon={faUser} /> </div>  
+
+        </div>
     );
 }
 
