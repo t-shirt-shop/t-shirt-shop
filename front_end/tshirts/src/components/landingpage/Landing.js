@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
+import SaleThumbnailSection from "../../components/landingpage/ShirtThumbnailGrid.js/SaleThumbnailSection";
 
 class Landing extends React.Component {
     constructor() {
@@ -7,7 +8,13 @@ class Landing extends React.Component {
     }
     render(){
         return (
-            <Nav /> 
+            <div>
+                <Nav /> 
+
+
+                {/* Leslie, I'll put my items below this line for now. */}
+                <SaleThumbnailSection />
+            </div>
         )
     }
 }
