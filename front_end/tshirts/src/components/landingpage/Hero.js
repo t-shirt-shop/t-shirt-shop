@@ -1,8 +1,10 @@
 import React from 'react';
 
+import img from "../../assets/LimitedEdition.png";
+
 function Hero(){
     return(
-        <div></div>
+        <div><img src={img} /> </div>
     );
 }
 
