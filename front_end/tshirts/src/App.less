@@ -1,10 +1,16 @@
+// to use LESS, add className's here. Start app with command 'dev-start' rather than 'start'
+
+@applink-color: #23f110;
+
 .App {
   text-align: center;
 }
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -15,9 +21,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .App-link {
-  color: #23f110;
+  color: @applink-color;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,8 +34,8 @@
     transform: rotate(360deg);
   }
 }
+
 .bar-text {
-  color: green;
-  font-style: italic;
+    color: green;
+    font-style: italic;
 }
-/*# sourceMappingURL=App.css.map */
