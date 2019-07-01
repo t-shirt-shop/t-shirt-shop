@@ -8,6 +8,9 @@ exports.up = function(knex, Promise) {
       .unique('shirt_name')
 
     tbl
+      .string('image_url')
+
+    tbl
       .string('description')
       .notNullable()
 
