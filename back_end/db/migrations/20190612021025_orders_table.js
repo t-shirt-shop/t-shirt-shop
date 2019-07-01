@@ -12,7 +12,7 @@ exports.up = function(knex, Promise) {
       .defaultTo(-1)
 
     tbl
-      .integer('total')
+      .decimal('total')
       .notNullable()
 
     tbl

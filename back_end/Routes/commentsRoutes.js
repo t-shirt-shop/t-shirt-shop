@@ -12,7 +12,7 @@ router.post('', (req, res) => {
 	const {date, description, image, tshirt_id} = req.body
 	db.insert({date, description, image, tshirt_id}).into('comments')
 	.then(response => {
-		res.status(200).json(response)
+		res.status(201).json(response)
 	})
 	.catch(error => {
 		console.log(error)
