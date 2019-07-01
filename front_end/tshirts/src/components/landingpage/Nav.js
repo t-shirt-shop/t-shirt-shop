@@ -1,19 +1,28 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import styled from 'styled-components';
 
-// const Div = styled.div`
-//     display: flex;
-// ` 
+const ContainerDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 9.8px 20px;
+`
+const SubContainDiv = styled.div`
+    display: flex:
+    flex-direction: row;
+`
 
 function Nav() {
     return (
-        <div>
+        <ContainerDiv>
             <p>Logo</p>
-            <div> <FontAwesomeIcon icon={faShoppingCart} /> </div>  
-            <div> <FontAwesomeIcon icon={faUser} /> </div>  
+            <SubContainDiv> 
+                <FontAwesomeIcon icon={faShoppingCart} />
+                <FontAwesomeIcon icon={faUser} /> 
+            </SubContainDiv>  
 
-        </div>
+        </ContainerDiv>
     );
 }
 
