@@ -26,4 +26,8 @@
     transform: rotate(360deg);
   }
 }
+.bar-text {
+  color: green;
+  font-style: italic;
+}
 /*# sourceMappingURL=App.css.map */
