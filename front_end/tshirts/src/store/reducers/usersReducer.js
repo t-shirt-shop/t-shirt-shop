@@ -57,14 +57,10 @@ const usersReducer = (state = initialState, action) => {
                   loginError: '',
                   user: action.payload
               }
-<<<<<<< HEAD
+
           default:
             return state
-=======
-            default:
-                return state;
->>>>>>> 09a8454fb63025d60b07a774847deb5407657be4
-      }
+          }
 }
 
 export default usersReducer;
