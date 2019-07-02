@@ -38,13 +38,11 @@ const P = styled.p`
   align-content: center;
 `
 
-
-
 const RoundedButton = (props) => {
   return (
       <div>
           <StyledButton>SHOP SALES
-            <Span><FontAwesomeIcon icon={faChevronCircleRight} size="xl"/></Span> 
+            <Span><FontAwesomeIcon icon={faChevronCircleRight} size="lg"/></Span> 
         </StyledButton> 
       </div>
   )
