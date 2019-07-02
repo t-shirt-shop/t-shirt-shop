@@ -134,7 +134,7 @@ class NewUsers extends React.Component {
                 </form>
                 <Button onClick={this.handleSubmit}>SIGN UP <Span>
                 {/* <img src={arrow} */}
-                    <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
+                    <FontAwesomeIcon icon={faChevronCircleRight} size="lg"/>
                     </Span> </Button>
             </ContainerDiv>
         );
