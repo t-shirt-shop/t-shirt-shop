@@ -20,11 +20,8 @@ class Landing extends React.Component {
                 <Nav /> 
                 <Hero />
 
-
-                {/* Leslie, I'll put my items below this line for now. */}
                 <SaleThumbnailSection />
 
-                {/*HOT FOUR BANNER NOT THE GRID THAT IS STILL ALL YOU BRYCE :)*/}
                 <HotFour />
                 <GridImage />
                 <NewUsers />
