@@ -7,6 +7,8 @@ import NewUsers from './NewUsers';
 import RecentlyAdded from './RecentlyAdded';
 import DontForget from './DontForget';
 import Footer from "./Footer";
+import GridImage from "./ShirtThumbnailGrid.js/GridImage";
+import GridImageSix from "./ShirtThumbnailGrid.js/GridImageSix";
 
 class Landing extends React.Component {
     constructor() {
@@ -24,10 +26,11 @@ class Landing extends React.Component {
 
                 {/*HOT FOUR BANNER NOT THE GRID THAT IS STILL ALL YOU BRYCE :)*/}
                 <HotFour />
-
+                <GridImage />
                 <NewUsers />
 
                 <RecentlyAdded />
+                <GridImageSix />
                 <DontForget/>
                 <Footer />
             </div>

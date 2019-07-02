@@ -7,6 +7,7 @@ const H1 = styled.h1`
     margin: 0 auto;
     font-weight: 700;
     font-size: 4.7vh;
+    margin-top: 15px;
 `
 const P = styled.p`
     padding-bottom: 15px; 
