@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { registerNewUser } from '../../store/actions/usersActions';
 import Nav from "../landingpage/Nav";
-import svg from "../../assets/SIGN_IN.svg";
+import svg from "../../assets/SIGN_UP.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChevronCircleRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -13,7 +13,7 @@ const Button = styled.button`
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
-    margin: 10vh 0;
+    margin: 0;
     text-decoration: none;
     color: #ffffff;
     font-family: sans-serif;
@@ -52,7 +52,7 @@ const Input = styled.input`
 
 `;
 const H2 = styled.h2`
-    padding-top: 40px; 
+    padding-top: 10px; 
     margin: 0 auto;
     font-family: arial;
     font-weight: 700;
@@ -104,7 +104,6 @@ class NewUsers extends React.Component {
       };
 
     handleSubmit = e => {
-        console.log("should be routing!!!!!!!!!")
         console.log(this.props)
         e.preventDefault();
         this.props.registerNewUser(this.state.LoginUserCreds)
