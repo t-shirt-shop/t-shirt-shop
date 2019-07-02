@@ -13,11 +13,11 @@ const ButtonGroup = styled.div`
     
 `
 
-const StyledButton = styled.button`
-    background-color: #9D9E9F;
+const StyledButton = styled.span`
+    background-image: linear-gradient(#505862, #9D9E9F);
     padding: 10px 20px; 
     cursor: pointer; 
-    
+    color: white;
 `
 
 function Hero(){
