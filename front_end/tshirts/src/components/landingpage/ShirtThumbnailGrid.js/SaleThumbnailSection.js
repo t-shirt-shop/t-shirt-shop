@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import StyledLabel from './StyledLabel';
 import GridImage from './GridImage';
+import RoundedButton from './RoundedButton';
 
 class SaleThumbnailSection extends Component {
     // constructor(props) {
@@ -12,6 +13,7 @@ class SaleThumbnailSection extends Component {
             <div>
                 <StyledLabel />
                 <GridImage />
+                <RoundedButton />
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import img3 from "../../../assets/ShirtGrid.png";
 
 const DivContainer = styled.div`
     display: flex;
@@ -59,7 +60,7 @@ class GridImage extends Component {
       <DivContainer>
       {images.map((image, id) => (
         <ParentDiv>
-          <Img src={require("./GasMask-Black-Male.png")} alt="gas-mask" />
+          <Img src={img3} alt="gas-mask" />
           {/* <div className='black-bar'>
             <h5 className='shirt-name'>Fish Mask</h5>
             <p className='shirt-price'>$50</p>
