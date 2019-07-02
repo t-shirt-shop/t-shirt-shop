@@ -126,7 +126,7 @@ class NewUsers extends React.Component {
                     />
                     <Input 
                         placeholder="1Fish2Fish"
-                        type="text"
+                        type="password"
                         value={this.state.password}
                         onChange={this.handleChange}
                         name='password'
