@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 
 const StyledButton = styled.button`
-background-image: linear-gradient(to right, #9F6EA3, #FF74A4); 
+background-image: linear-gradient(to right, #FF7676, #D5A3FF); 
 display: inline-block;
 border: none;
 padding: 1rem 2rem;
@@ -40,14 +40,14 @@ const P = styled.p`
 
 
 
-const RoundedButton = (props) => {
+const RecentlyAddedButton = (props) => {
   return (
       <div>
-          <StyledButton>SHOP SALES
+          <StyledButton>SHOP RECENTLY ADDED
             <Span><FontAwesomeIcon icon={faChevronCircleRight} size="xl"/></Span> 
         </StyledButton> 
       </div>
   )
 }
 
-export default RoundedButton;
+export default RecentlyAddedButton;
