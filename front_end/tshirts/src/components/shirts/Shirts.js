@@ -1,6 +1,7 @@
 import React from 'react';
 import {shirtsByCategory} from '../../store/actions/shirtsActions.js'
 import {registerNewUser, loginUser} from '../../store/actions/usersActions.js'
+import {getShirtsComments} from '../../store/actions/commentsActions.js'
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -12,6 +13,7 @@ class Shirts extends React.Component {
 
 	componentDidMount(){
 		this.props.shirtsByCategory(1)
+		this.props.getShirtsComments(1)
 		console.log(this.props)
 	}
 
@@ -30,8 +32,9 @@ const mapStateToProps = (state) => {
 		loading: state.shirts.loading,
 		error: state.shirts.error,
 		shirts: state.shirts.shirts,
-		users: state.users.user
+		users: state.users.user,
+		comments: state.comments.comments
 	}
 }
 
-export default connect(mapStateToProps, {shirtsByCategory, registerNewUser, loginUser})(Shirts);
+export default connect(mapStateToProps, {shirtsByCategory, registerNewUser, loginUser, getShirtsComments})(Shirts);
