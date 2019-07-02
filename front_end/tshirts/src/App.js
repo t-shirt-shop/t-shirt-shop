@@ -1,11 +1,12 @@
 import React from 'react';
 import Landing from "./components/landingpage/Landing";
 import './App.css';
+import { Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Landing />
+    	<Route exact path="/" component={Landing} />
     </div>
   );
 }
