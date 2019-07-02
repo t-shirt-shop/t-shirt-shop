@@ -12,7 +12,7 @@ const shirtsReducer = (state = initialState, action) => {
 		case 'GET_BY_CATEGORY_SUCCESS':
 			return {...state, loading: false, error: null, shirts: data}
 		case 'GET_BY_CATEGORY_ERROR':
-			return {... state, loading: false, error: null, error: data}
+			return {...state, loading: false, error: null, error: data}
 		default:
 			return state
 	}
