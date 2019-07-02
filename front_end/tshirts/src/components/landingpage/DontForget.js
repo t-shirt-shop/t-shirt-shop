@@ -7,11 +7,18 @@ const H2 = styled.h2`
     margin: 0 auto;
     font-family: arial;
     font-weight: bold;
+    font-weight: 700;
+    font-size: 3.7vh;
 `
 const P = styled.p`
     padding-bottom: 15px; 
     color: white;
     margin: 0 auto;
+     font-family: arial;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 3.2vh;
+    font-size: 2vh;
 `
 const Div = styled.div`
     background: #515C6F;
@@ -57,8 +64,7 @@ const DontForget = (props) => {
         <Div>
             <H2>DONT FORGET TO SIGN UP</H2>
             <Button>SIGN UP</Button>
-            <P>IF YOU SIGN UP YOU GET AN</P>
-            <P>ADDITIONAL 10% OFF</P>
+            <P>IF YOU SIGN UP YOU GET AN <br/>ADDITIONAL 10% OFF</P>
         </Div>
     )
 }

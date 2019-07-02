@@ -32,6 +32,25 @@ const Input = styled.input`
   border: none;
   border-radius: 3px;
 `;
+const H2 = styled.h2`
+    padding-top: 40px; 
+    margin: 0 auto;
+    font-family: arial;
+    font-weight: 700;
+    font-size: 4.7vh;
+`
+const P = styled.p`
+    padding-bottom: 15px; 
+    margin: 0 auto;
+    font-family: arial;
+    font-style: italic;
+    font-size: 2vh;
+    font-weight: bold;
+    line-height: 3.5vh;
+
+    
+`
+
 class NewUsers extends React.Component {
     constructor(){
         super();
@@ -41,9 +60,8 @@ class NewUsers extends React.Component {
     render(){
         return(
             <ContainerDiv>
-                <h1>FOR NEW USERS ONLY</h1>
-                <p>ENJOY AND ADDITIONAL 10% OFF YOUR ORDER</p>
-                <p>WHEN YOU REGISTER TODAY</p>
+                <H2>FOR NEW USERS ONLY</H2>
+                <P>ENJOY AND ADDITIONAL 10% OFF YOUR ORDER <br/> WHEN YOU REGISTER TODAY</P>
 
                 <form>
                     <Input 

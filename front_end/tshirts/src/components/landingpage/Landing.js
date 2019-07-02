@@ -6,6 +6,7 @@ import HotFour from "./HotFour";
 import NewUsers from './NewUsers';
 import RecentlyAdded from './RecentlyAdded';
 import DontForget from './DontForget';
+import Footer from "./Footer";
 
 class Landing extends React.Component {
     constructor() {
@@ -28,6 +29,7 @@ class Landing extends React.Component {
 
                 <RecentlyAdded />
                 <DontForget/>
+                <Footer />
             </div>
         )
     }

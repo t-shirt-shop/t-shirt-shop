@@ -6,9 +6,14 @@ import img2 from "../../assets/Weekly Sale.png";
 import styled from "styled-components";
 
 const Img = styled.img`
-    border-radius: 20px;
-    margin-top: 35px;
+    border-radius: 10px;
+    
+    @media(maxwidth: 500){
+        width: 1500;
+        height: 740
+    }
 `
+
 const ButtonGroup = styled.div`
     button:first-child {
         border-top-left-radius: 20px;
@@ -31,6 +36,7 @@ const StyledButton = styled.button`
     text-decoration: none;
     color: #ffffff;
     font-family: arial;
+    font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
