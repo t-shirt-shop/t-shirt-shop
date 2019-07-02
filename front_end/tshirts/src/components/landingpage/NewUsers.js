@@ -71,7 +71,7 @@ class NewUsers extends React.Component {
         super(props);
         this.state = {
             registerUser: {
-            name: "",
+            user_name: "",
             email: "",
             password: ""
             }
@@ -88,19 +88,18 @@ class NewUsers extends React.Component {
       };
 
     handleSubmit = e => {
-        console.log("should be routing!!!!!!!!!")
-        console.log(this.props)
         e.preventDefault();
-        this.props.registerNewUser(this.state.registerUser)
-        .then(() => {
-            this.props.history.push("/shirts");
-         });
+        let user = this.state.registerUser
+        const {registerNewUser, history} = this.props
         this.setState({ 
             registerUser: {
-                name: '',
+                user_name: '',
                 email: '',
                 password: ''
             }
+        }, () => {
+            registerNewUser(user)
+            history.push("/shirts")
         })
     };
 
@@ -113,21 +112,21 @@ class NewUsers extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <Input 
                         type="text"
-                        placeholder="Theodor Seuss Geisel"
-                        value={this.state.name} 
+                        placeholder="user name"
+                        value={this.state.user_name} 
                         onChange={this.handleChange}
-                        name='name'
+                        name='user_name'
                     />
                     <Input 
                         type="text"
-                        placeholder="TheoderSeuss@gmail.com"
+                        placeholder="your email"
                         value={this.state.email}
                         onChange={this.handleChange}
                         name='email'
                     />
                     <Input 
-                        placeholder="1Fish2Fish"
-                        type="text"
+                        placeholder="password"
+                        type="password"
                         value={this.state.password}
                         onChange={this.handleChange}
                         name='password'
