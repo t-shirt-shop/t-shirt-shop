@@ -21,13 +21,13 @@ class Landing extends React.Component {
             <div>
                 <Nav /> 
                 <Hero />
-
                 <SaleThumbnailSection />
-
                 <HotFour />
                 <GridImage />
                 <HourFourButton />
+
                 <NewUsers history={this.props.history}/>
+
                 <RecentlyAdded />
                 <GridImageSix />
                 <RecentlyAddedButton />

@@ -88,18 +88,18 @@ class NewUsers extends React.Component {
       };
 
     handleSubmit = e => {
-        console.log("should be routing!!!!!!!!!")
-        console.log(this.props)
         e.preventDefault();
-        this.props.registerNewUser(this.state.registerUser)
-        this.props.history.push("/shirts");
-       
+        let user = this.state.registerUser
+        const {registerNewUser, history} = this.props
         this.setState({ 
             registerUser: {
-                "user_name": '',
+                user_name: '',
                 email: '',
                 password: ''
             }
+        }, () => {
+            registerNewUser(user)
+            history.push("/shirts")
         })
     };
 
@@ -112,20 +112,20 @@ class NewUsers extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <Input 
                         type="text"
-                        placeholder="Theodor Seuss Geisel"
+                        placeholder="user name"
                         value={this.state.user_name} 
                         onChange={this.handleChange}
                         name='user_name'
                     />
                     <Input 
                         type="text"
-                        placeholder="TheoderSeuss@gmail.com"
+                        placeholder="your email"
                         value={this.state.email}
                         onChange={this.handleChange}
                         name='email'
                     />
                     <Input 
-                        placeholder="1Fish2Fish"
+                        placeholder="password"
                         type="password"
                         value={this.state.password}
                         onChange={this.handleChange}
