@@ -30,7 +30,7 @@ const Button = styled.button`
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
-    margin: 0;
+    margin: 10px 0;
     text-decoration: none;
     background: #0069ed;
     color: #ffffff;
@@ -42,7 +42,11 @@ const Button = styled.button`
                 transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
-    
+    background-image: linear-gradient(to right, #2FC145, #B4FF4E);
+    width: 330px;
+    border-radius: 10px;
+    font-family: arial;
+    font-weight: bold;
     
     button:hover,
     button:focus {

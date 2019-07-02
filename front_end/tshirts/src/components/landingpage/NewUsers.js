@@ -89,6 +89,7 @@ class NewUsers extends React.Component {
       };
 
     handleSubmit = e => {
+        console.log("should be routing!!!!!!!!!")
         e.preventDefault();
         this.props.registerNewUser(this.state.registerUser)
         .then(() => {
@@ -132,7 +133,7 @@ class NewUsers extends React.Component {
                         name='password'
                     />
                 </form>
-                <Button>SIGN UP <Span>
+                <Button onClick={this.handleSubmit}>SIGN UP <Span>
                 {/* <img src={arrow} */}
                     <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
                     </Span> </Button>
