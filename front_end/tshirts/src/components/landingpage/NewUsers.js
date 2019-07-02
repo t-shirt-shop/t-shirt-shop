@@ -92,9 +92,9 @@ class NewUsers extends React.Component {
         console.log(this.props)
         e.preventDefault();
         this.props.registerNewUser(this.state.registerUser)
-        // .then(() => {
-        //     this.props.history.push("/shirts");
-        //  });
+        .then(() => {
+            this.props.history.push("/shirts");
+         });
         this.setState({ 
             registerUser: {
                 name: '',
