@@ -1,29 +1,22 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import styled from 'styled-components';
 
-const ContainerDiv = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin: 8.8px 20px;
-`
-const SubContainDiv = styled.div`
-    display: flex:
-    flex-direction: row;
-    justify-content: center;
-`
+// const Div = styled.div`
+//     display: flex;
+// ` 
 
 function Nav() {
     return (
-        <ContainerDiv>
-            <p>Logo</p>
-            <SubContainDiv> 
-                <FontAwesomeIcon icon={faShoppingCart} />
-                <FontAwesomeIcon icon={faUser} /> 
-            </SubContainDiv>  
-
-        </ContainerDiv>
+        <div className='navi'>
+            <div className='logos'>
+                <p className='logo'>Logo</p>
+            </div>
+            <div className='icons'>
+                <div className='icon'> <FontAwesomeIcon icon={faUser} /> 
+                </div><div className='icon'> <FontAwesomeIcon icon={faShoppingCart} /> </div>   
+            </div>
+        </div>
     );
 }
 
