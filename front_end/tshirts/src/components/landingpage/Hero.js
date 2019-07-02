@@ -20,6 +20,7 @@ const ButtonGroup = styled.div`
     }
     position: relative;
     top: -25px;
+    
 `
 
 const StyledButton = styled.button`
@@ -37,7 +38,7 @@ const StyledButton = styled.button`
                 transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: linear-gradient(#505862, #9D9E9F);
+    background-image: linear-gradient(180deg, #505862, #9D9E9F);
 
     padding: 10px 20px; 
     cursor: pointer; 
