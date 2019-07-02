@@ -40,7 +40,7 @@ const usersReducer = (state = initialState, action) => {
           case REGISTER_FAILURE:
               return {
                   ...state,
-                  registationError: 'error'
+                  registationError: action.payload
               }
 
           case LOGIN_START:
@@ -55,8 +55,10 @@ const usersReducer = (state = initialState, action) => {
                   loggingIn: false,
                   loggedIn: true,
                   loginError: '',
-                  user: {}
+                  user: action.payload
               }
+          default:
+            return state
       }
 }
 
