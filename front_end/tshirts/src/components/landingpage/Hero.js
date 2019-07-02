@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const Img = styled.img`
     border-radius: 20px;
-    margin-top: 7.5px;
+    margin-top: 35px;
 `
 const ButtonGroup = styled.div`
     
