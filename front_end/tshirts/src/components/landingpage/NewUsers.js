@@ -71,7 +71,7 @@ class NewUsers extends React.Component {
         super(props);
         this.state = {
             registerUser: {
-            name: "",
+            "user_name": "",
             email: "",
             password: ""
             }
@@ -133,10 +133,10 @@ class NewUsers extends React.Component {
                         name='password'
                     />
                 </form>
-                <Button onClick={this.handleSubmit}>SIGN UP <Span>
-                {/* <img src={arrow} */}
-                    <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
-                    </Span> </Button>
+                <Button 
+                    onClick={this.handleSubmit}>SIGN UP 
+                    <Span><FontAwesomeIcon icon={faChevronCircleRight} size="xl"/></Span> 
+                </Button>
             </ContainerDiv>
         );
     }
