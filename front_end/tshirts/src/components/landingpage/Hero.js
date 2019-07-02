@@ -8,10 +8,11 @@ import styled from "styled-components";
 const Img = styled.img`
     border-radius: 10px;
     
-    @media(maxwidth: 500){
-        width: 1500;
-        height: 740
+    @media(min-width: 500px){
+        width: 100%;
+        height: 100%;
     }
+
 `
 
 const ButtonGroup = styled.div`
@@ -53,7 +54,7 @@ const StyledButton = styled.button`
 function Hero(){
     return(
         <div>
-            <div><img src={img} /> </div>
+            <div><Img src={img} /> </div>
             <ButtonGroup>
                 <StyledButton>Shop All</StyledButton>
                 <StyledButton>Hot</StyledButton>
