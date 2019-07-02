@@ -44,7 +44,7 @@ const RecentlyAddedButton = (props) => {
   return (
       <div>
           <StyledButton>SHOP RECENTLY ADDED
-            <Span><FontAwesomeIcon icon={faChevronCircleRight} size="xl"/></Span> 
+            <Span><FontAwesomeIcon icon={faChevronCircleRight} size="lg"/></Span> 
         </StyledButton> 
       </div>
   )

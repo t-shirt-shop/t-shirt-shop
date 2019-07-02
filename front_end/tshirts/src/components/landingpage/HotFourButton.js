@@ -44,7 +44,7 @@ const HotFourButton = (props) => {
   return (
       <div>
           <StyledButton>SHOP HOT FOUR
-            <Span><FontAwesomeIcon icon={faChevronCircleRight} size="xl"/></Span> 
+            <Span><FontAwesomeIcon icon={faChevronCircleRight} size="lg"/></Span> 
         </StyledButton> 
       </div>
   )

@@ -59,12 +59,8 @@ class GridImage extends Component {
     return (
       <DivContainer>
       {images.map((image, id) => (
-        <ParentDiv>
+        <ParentDiv key={id}>
           <Img src={img3} alt="gas-mask" />
-          {/* <div className='black-bar'>
-            <h5 className='shirt-name'>Fish Mask</h5>
-            <p className='shirt-price'>$50</p>
-          </div> */}
           <Div>
             <H5>Fish Mask</H5>
             <H3>$50</H3>

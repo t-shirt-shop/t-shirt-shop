@@ -25,7 +25,9 @@ class Landing extends React.Component {
                 <HotFour />
                 <GridImage />
                 <HourFourButton />
-                <NewUsers history={this.props.history} />
+
+                <NewUsers history={this.props.history}/>
+
                 <RecentlyAdded />
                 <GridImageSix />
                 <RecentlyAddedButton />
