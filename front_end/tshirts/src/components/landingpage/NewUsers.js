@@ -4,7 +4,6 @@ import { registerNewUser } from '../../store/actions/usersActions';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
-import arrow from '../../assets/arrow-alt-circle-right.svg'
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -68,8 +67,8 @@ const Span = styled.span`
 `
 
 class NewUsers extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             registerUser: {
             name: "",
@@ -90,11 +89,12 @@ class NewUsers extends React.Component {
 
     handleSubmit = e => {
         console.log("should be routing!!!!!!!!!")
+        console.log(this.props)
         e.preventDefault();
         this.props.registerNewUser(this.state.registerUser)
-        .then(() => {
-            this.props.history.push("/shirts");
-         });
+        // .then(() => {
+        //     this.props.history.push("/shirts");
+        //  });
         this.setState({ 
             registerUser: {
                 name: '',
