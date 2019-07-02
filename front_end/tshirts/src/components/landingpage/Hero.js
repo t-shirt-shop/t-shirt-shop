@@ -10,14 +10,37 @@ const Img = styled.img`
     margin-top: 35px;
 `
 const ButtonGroup = styled.div`
-    
+    button:first-child {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    button:last-child {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    position: relative;
+    top: -25px;
 `
 
-const StyledButton = styled.span`
+const StyledButton = styled.button`
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background-image: linear-gradient(#505862, #9D9E9F);
+
     padding: 10px 20px; 
     cursor: pointer; 
-    color: white;
 `
 
 function Hero(){
