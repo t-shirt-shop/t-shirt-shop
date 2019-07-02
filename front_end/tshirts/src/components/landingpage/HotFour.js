@@ -13,6 +13,7 @@ const P = styled.p`
 `
 const Div = styled.div`
     background-image: linear-gradient(to right, #FF7676, #FFAE4E);
+    margin-top: 10%;
 `
 const HotFour = (props) => {
 
