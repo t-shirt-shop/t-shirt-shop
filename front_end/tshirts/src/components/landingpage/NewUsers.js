@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import { registerNewUser } from '../../store/actions/usersActions';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import arrow from '../../assets/arrow-alt-circle-right.svg'
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -23,9 +24,14 @@ const Button = styled.button`
     -webkit-appearance: none;
     -moz-appearance: none;
     background: #40C947;
+    width: 330px;
+    border-radius: 30px;
+    font-family: arial;
+    font-weight: bold;
 `
 const ContainerDiv = styled.div`
     background: #F2F8F8;
+    margin: 25px 0;
 `
 const Input = styled.input`
   padding: 0.5em;
@@ -39,7 +45,6 @@ const Input = styled.input`
   background: transparent;
   border-bottom: 1px solid #515C6F;
 
- 
 `;
 const H2 = styled.h2`
     padding-top: 40px; 
@@ -55,9 +60,11 @@ const P = styled.p`
     font-style: italic;
     font-size: 2vh;
     font-weight: bold;
-    line-height: 3.5vh;
-
-    
+    line-height: 4vh;
+    align-content: center;
+`
+const Span = styled.span`
+    float: right;
 `
 
 class NewUsers extends React.Component {
@@ -125,7 +132,10 @@ class NewUsers extends React.Component {
                         name='password'
                     />
                 </form>
-                <Button>SIGN UP <span><FontAwesomeIcon icon={faArrowRight} /></span> </Button>
+                <Button>SIGN UP <Span>
+                {/* <img src={arrow} */}
+                    <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
+                    </Span> </Button>
             </ContainerDiv>
         );
     }
