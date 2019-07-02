@@ -71,7 +71,7 @@ class NewUsers extends React.Component {
         super(props);
         this.state = {
             registerUser: {
-            name: "",
+            "user_name": "",
             email: "",
             password: ""
             }
@@ -92,12 +92,11 @@ class NewUsers extends React.Component {
         console.log(this.props)
         e.preventDefault();
         this.props.registerNewUser(this.state.registerUser)
-        .then(() => {
-            this.props.history.push("/shirts");
-         });
+        this.props.history.push("/shirts");
+       
         this.setState({ 
             registerUser: {
-                name: '',
+                "user_name": '',
                 email: '',
                 password: ''
             }
@@ -114,9 +113,9 @@ class NewUsers extends React.Component {
                     <Input 
                         type="text"
                         placeholder="Theodor Seuss Geisel"
-                        value={this.state.name} 
+                        value={this.state.user_name} 
                         onChange={this.handleChange}
-                        name='name'
+                        name='user_name'
                     />
                     <Input 
                         type="text"
@@ -127,7 +126,7 @@ class NewUsers extends React.Component {
                     />
                     <Input 
                         placeholder="1Fish2Fish"
-                        type="text"
+                        type="password"
                         value={this.state.password}
                         onChange={this.handleChange}
                         name='password'
@@ -137,6 +136,7 @@ class NewUsers extends React.Component {
                 {/* <img src={arrow} */}
                     <FontAwesomeIcon icon={faChevronCircleRight} size="lg"/>
                     </Span> </Button>
+
             </ContainerDiv>
         );
     }

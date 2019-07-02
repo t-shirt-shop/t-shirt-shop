@@ -1,9 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { registerNewUser } from '../../store/actions/usersActions';
+import Nav from "../landingpage/Nav";
+import svg from "../../assets/SIGN_IN.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faChevronCircleRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -11,7 +13,7 @@ const Button = styled.button`
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
-    margin: 0;
+    margin: 10vh 0;
     text-decoration: none;
     color: #ffffff;
     font-family: sans-serif;
@@ -31,6 +33,8 @@ const Button = styled.button`
 const ContainerDiv = styled.div`
     background: #F2F8F8;
     margin: 25px 0;
+    min-height: 605px;
+    margin: 0;
 `
 const Input = styled.input`
   padding: 0.5em;
@@ -43,6 +47,8 @@ const Input = styled.input`
   outline: 0;
   background: transparent;
   border-bottom: 1px solid #515C6F;
+  width: 300px;
+  margin: 30px;
 
 `;
 const H2 = styled.h2`
@@ -65,13 +71,21 @@ const P = styled.p`
 const Span = styled.span`
     float: right;
 `
+const Img = styled.img`
+  margin-top: 40px;
+`
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 
 class NewUsers extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            registerUser: {
-            name: "",
+            LoginUserCreds: {
             email: "",
             password: ""
             }
@@ -80,8 +94,8 @@ class NewUsers extends React.Component {
 
     handleChange = e => {
         this.setState({ 
-            registerUser: {
-                ...this.state.registerUser,
+            LoginUserCreds: {
+                ...this.state.LoginUserCreds,
                 [e.target.name]: e.target.value
             }
         })
@@ -91,13 +105,12 @@ class NewUsers extends React.Component {
         console.log("should be routing!!!!!!!!!")
         console.log(this.props)
         e.preventDefault();
-        this.props.registerNewUser(this.state.registerUser)
+        this.props.registerNewUser(this.state.LoginUserCreds)
         .then(() => {
             this.props.history.push("/shirts");
          });
         this.setState({ 
-            registerUser: {
-                name: '',
+            LoginUserCreds: {
                 email: '',
                 password: ''
             }
@@ -106,38 +119,35 @@ class NewUsers extends React.Component {
 
     render(){
         return(
+          <div>
+            <Nav />
             <ContainerDiv>
-                <H2>FOR NEW USERS ONLY</H2>
-                <P>ENJOY AND ADDITIONAL 10% OFF YOUR ORDER <br/> WHEN YOU REGISTER TODAY</P>
+                <Img src={svg} />
+                <H2>SIGN IN</H2>
+                <P>THANK YOU FOR SHOPPING WITH US!</P>
 
-                <form onSubmit={this.handleSubmit}>
+                <Form onSubmit={this.handleSubmit}>
                     <Input 
                         type="text"
-                        placeholder="Theodor Seuss Geisel"
-                        value={this.state.name} 
-                        onChange={this.handleChange}
-                        name='name'
-                    />
-                    <Input 
-                        type="text"
-                        placeholder="TheoderSeuss@gmail.com"
+                        placeholder="Name"
                         value={this.state.email}
                         onChange={this.handleChange}
                         name='email'
                     />
                     <Input 
-                        placeholder="1Fish2Fish"
+                        placeholder="Password"
                         type="text"
                         value={this.state.password}
                         onChange={this.handleChange}
                         name='password'
                     />
-                </form>
-                <Button onClick={this.handleSubmit}>SIGN UP <Span>
+                </Form>
+                <Button onClick={this.handleSubmit}>SIGN IN <Span>
                 {/* <img src={arrow} */}
                     <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
                     </Span> </Button>
             </ContainerDiv>
+          </div>
         );
     }
 }
