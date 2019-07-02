@@ -12,17 +12,16 @@ const P = styled.p`
     margin: 0 auto;
 `
 const Div = styled.div`
-    background-image: linear-gradient(to right, #9F6EA3, #FF74A4);
-    margin-top: 15px;
+    background-image: linear-gradient(to right, #77A5F8, #D5A3FF);
 `
-const StyledLabel = (props) => {
+const RecentlyAdded = (props) => {
 
     return (
         <Div>
-            <H1>24 Hour Sale</H1>
-            <P>15% OFF SELECT ITEMS</P>
+            <H1>Recently Added</H1>
+            <P>MOST RECENTLY ADDED DESIGNS</P>
         </Div>
     )
 }
 
-export default StyledLabel;
+export default RecentlyAdded;

@@ -4,6 +4,7 @@ import SaleThumbnailSection from "../../components/landingpage/ShirtThumbnailGri
 import Hero from "./Hero";
 import HotFour from "./HotFour";
 import NewUsers from './NewUsers';
+import RecentlyAdded from './RecentlyAdded';
 
 class Landing extends React.Component {
     constructor() {
@@ -23,6 +24,8 @@ class Landing extends React.Component {
                 <HotFour />
 
                 <NewUsers />
+
+                <RecentlyAdded />
             </div>
         )
     }
