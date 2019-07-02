@@ -10,7 +10,14 @@ const Img = styled.img`
     margin-top: 7.5px;
 `
 const ButtonGroup = styled.div`
+    
+`
 
+const StyledButton = styled.button`
+    background-color: #9D9E9F;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    
 `
 
 function Hero(){
@@ -18,10 +25,10 @@ function Hero(){
         <div>
             <div><img src={img} /> </div>
             <ButtonGroup>
-                <button>Shop All</button>
-                <button>Hot</button>
-                <button>Artistic</button>
-                <button>Sale</button>
+                <StyledButton>Shop All</StyledButton>
+                <StyledButton>Hot</StyledButton>
+                <StyledButton>Artistic</StyledButton>
+                <StyledButton>Sale</StyledButton>
             </ButtonGroup>
             <div><Img src={img2} /> </div>
         </div>

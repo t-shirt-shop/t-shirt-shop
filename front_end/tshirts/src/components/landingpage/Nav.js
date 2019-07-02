@@ -1,6 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fontawesome/react-fontawesome";
-import { faUser, faShoppingCart } from "@fontawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import styled from 'styled-components';
 
 const ContainerDiv = styled.div`
