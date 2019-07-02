@@ -10,12 +10,14 @@ import { NavLink } from "react-router-dom";
 function Nav() {
     return (
         <div className='navi'>
-            <div className='logos'>
-                <p className='logo'>Logo</p>
-            </div>
+            <NavLink to="/">
+                <div className='logos'>
+                    <p className='logo'>Logo</p>
+                </div>
+            </NavLink>
             <div className='icons'>
                 <div className='icon'> 
-                    <NavLink to="/login">
+                    <NavLink exact to="/login">
                         <FontAwesomeIcon icon={faUser} /> 
                     </NavLink>
                 </div><div className='icon'> <FontAwesomeIcon icon={faShoppingCart} /> </div>   

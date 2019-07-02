@@ -54,7 +54,7 @@ const StyledButton = styled.button`
 function Hero(){
     return(
         <div>
-            <div><Img src={img} /> </div>
+            <div><img src={img} /> </div>
             <ButtonGroup>
                 <StyledButton>Shop All</StyledButton>
                 <StyledButton>Hot</StyledButton>
