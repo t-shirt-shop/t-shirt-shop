@@ -40,7 +40,7 @@ const H3 = styled.h3`
     color: white;
     padding-right: 15px;
 `
-class GridImage extends Component {
+class GridImageSix extends Component {
 
     state = {
       images: [
@@ -75,4 +75,4 @@ class GridImage extends Component {
   }
 }
 
-export default GridImage;
+export default GridImageSix;
