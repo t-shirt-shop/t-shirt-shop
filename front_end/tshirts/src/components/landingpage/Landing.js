@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import SaleThumbnailSection from "../../components/landingpage/ShirtThumbnailGrid.js/SaleThumbnailSection";
 import Hero from "./Hero";
 import HotFour from "./HotFour";
+import NewUsers from './NewUsers';
 
 class Landing extends React.Component {
     constructor() {
@@ -20,6 +21,8 @@ class Landing extends React.Component {
 
                 {/*HOT FOUR BANNER NOT THE GRID THAT IS STILL ALL YOU BRYCE :)*/}
                 <HotFour />
+
+                <NewUsers />
             </div>
         )
     }
