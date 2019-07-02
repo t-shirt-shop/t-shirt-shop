@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import HotFour from "./HotFour";
 import NewUsers from './NewUsers';
 import RecentlyAdded from './RecentlyAdded';
+import DontForget from './DontForget';
 
 class Landing extends React.Component {
     constructor() {
@@ -26,6 +27,7 @@ class Landing extends React.Component {
                 <NewUsers />
 
                 <RecentlyAdded />
+                <DontForget/>
             </div>
         )
     }
