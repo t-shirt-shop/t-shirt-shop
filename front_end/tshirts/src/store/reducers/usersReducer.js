@@ -57,6 +57,8 @@ const usersReducer = (state = initialState, action) => {
                   loginError: '',
                   user: {}
               }
+            default:
+                return state;
       }
 }
 
