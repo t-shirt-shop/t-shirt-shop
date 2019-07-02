@@ -1,4 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
+import { registerNewUser } from '../../store/actions/usersActions';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
@@ -31,6 +34,12 @@ const Input = styled.input`
   background: papayawhip;
   border: none;
   border-radius: 3px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #515C6F;
+
+ 
 `;
 const H2 = styled.h2`
     padding-top: 40px; 
@@ -54,8 +63,38 @@ const P = styled.p`
 class NewUsers extends React.Component {
     constructor(){
         super();
-    
+        this.state = {
+            registerUser: {
+            name: "",
+            email: "",
+            password: ""
+            }
+        };
     }
+
+    handleChange = e => {
+        this.setState({ 
+            registerUser: {
+                ...this.state.registerUser,
+                [e.target.name]: e.target.value
+            }
+        })
+      };
+
+    handleSubmit = e => {
+        e.preventDefault();
+        this.props.registerNewUser(this.state.registerUser)
+        .then(() => {
+            this.props.history.push("/shirts");
+         });
+        this.setState({ 
+            registerUser: {
+                name: '',
+                email: '',
+                password: ''
+            }
+        })
+    };
 
     render(){
         return(
@@ -63,20 +102,28 @@ class NewUsers extends React.Component {
                 <H2>FOR NEW USERS ONLY</H2>
                 <P>ENJOY AND ADDITIONAL 10% OFF YOUR ORDER <br/> WHEN YOU REGISTER TODAY</P>
 
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <Input 
                         type="text"
                         placeholder="Theodor Seuss Geisel"
-                        />
-                          <Input 
+                        value={this.state.name} 
+                        onChange={this.handleChange}
+                        name='name'
+                    />
+                    <Input 
                         type="text"
                         placeholder="TheoderSeuss@gmail.com"
-                        />
-                          <Input 
-                          placeholder="1Fish2Fish"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                        name='email'
+                    />
+                    <Input 
+                        placeholder="1Fish2Fish"
                         type="text"
-                        
-                        />
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                        name='password'
+                    />
                 </form>
                 <Button>SIGN UP <span><FontAwesomeIcon icon={faArrowRight} /></span> </Button>
             </ContainerDiv>
@@ -84,4 +131,4 @@ class NewUsers extends React.Component {
     }
 }
 
-export default NewUsers;
+export default connect(null, { registerNewUser })(NewUsers);
