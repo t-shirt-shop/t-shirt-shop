@@ -1,4 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
+
+const SignUpDiv = styled.span`
+    background: #40C947;
+`
 
 class NewUsers extends React.Component {
     constructor(){
@@ -27,7 +34,7 @@ class NewUsers extends React.Component {
                         
                         />
                 </form>
-                
+                <SignUpDiv>SIGN UP <span><FontAwesomeIcon icon={faArrowRight} /></span> </SignUpDiv>
             </div>
         );
     }
