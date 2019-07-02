@@ -6,11 +6,12 @@ import styled from 'styled-components';
 const ContainerDiv = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 9.8px 20px;
+    margin: 8.8px 20px;
 `
 const SubContainDiv = styled.div`
     display: flex:
     flex-direction: row;
+    justify-content: center;
 `
 
 function Nav() {
