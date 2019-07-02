@@ -85,16 +85,18 @@ class NewUsers extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            LoginUserCreds: {
-            email: "",
-            password: ""
+            RegisterUserCreds: {
+              name: "",
+              email: "",
+              password: "",
+              confirmPassword: ""
             }
         };
     }
 
     handleChange = e => {
         this.setState({ 
-            LoginUserCreds: {
+            RegisterUserCreds: {
                 ...this.state.LoginUserCreds,
                 [e.target.name]: e.target.value
             }
@@ -111,8 +113,10 @@ class NewUsers extends React.Component {
          });
         this.setState({ 
             LoginUserCreds: {
-                email: '',
-                password: ''
+              name: "",
+              email: "",
+              password: "",
+              confirmPassword: ""
             }
         })
     };
@@ -123,26 +127,40 @@ class NewUsers extends React.Component {
             <Nav />
             <ContainerDiv>
                 <Img src={svg} />
-                <H2>SIGN IN</H2>
-                <P>THANK YOU FOR SHOPPING WITH US!</P>
+                <H2>SIGN UP</H2>
+                <P>WHEN YOU SIGN UP YOU WILL GET 10% OFF YOUR FIRST ORDER!</P>
 
                 <Form onSubmit={this.handleSubmit}>
                     <Input 
                         type="text"
-                        placeholder="Name"
+                        placeholder="Full Name"
+                        value={this.state.name}
+                        onChange={this.handleChange}
+                        name='name'
+                    />
+                    <Input 
+                        type="text"
+                        placeholder="Email"
                         value={this.state.email}
                         onChange={this.handleChange}
                         name='email'
                     />
                     <Input 
-                        placeholder="Password"
                         type="text"
+                        placeholder="Password"
                         value={this.state.password}
                         onChange={this.handleChange}
                         name='password'
                     />
+                    <Input 
+                        placeholder="Confirm Password"
+                        type="text"
+                        value={this.state.confirmPassword}
+                        onChange={this.handleChange}
+                        name='CoNfrimPassword'
+                    />
                 </Form>
-                <Button onClick={this.handleSubmit}>SIGN IN <Span>
+                <Button onClick={this.handleSubmit}>SIGN UP <Span>
                 {/* <img src={arrow} */}
                     <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
                     </Span> </Button>
