@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { registerNewUser } from '../../store/actions/usersActions';
 import Nav from "../landingpage/Nav";
-import svg from "../../assets/SIGN_IN.svg";
+import svg from "../../assets/SIGN_UP.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChevronCircleRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -13,7 +13,7 @@ const Button = styled.button`
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
-    margin: 10vh 0;
+    margin: 0;
     text-decoration: none;
     color: #ffffff;
     font-family: sans-serif;
@@ -52,7 +52,7 @@ const Input = styled.input`
 
 `;
 const H2 = styled.h2`
-    padding-top: 40px; 
+    padding-top: 10px; 
     margin: 0 auto;
     font-family: arial;
     font-weight: 700;
@@ -85,16 +85,18 @@ class NewUsers extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            LoginUserCreds: {
-            email: "",
-            password: ""
+            RegisterUserCreds: {
+              name: "",
+              email: "",
+              password: "",
+              confirmPassword: ""
             }
         };
     }
 
     handleChange = e => {
         this.setState({ 
-            LoginUserCreds: {
+            RegisterUserCreds: {
                 ...this.state.LoginUserCreds,
                 [e.target.name]: e.target.value
             }
@@ -102,7 +104,6 @@ class NewUsers extends React.Component {
       };
 
     handleSubmit = e => {
-        console.log("should be routing!!!!!!!!!")
         console.log(this.props)
         e.preventDefault();
         this.props.registerNewUser(this.state.LoginUserCreds)
@@ -111,8 +112,10 @@ class NewUsers extends React.Component {
          });
         this.setState({ 
             LoginUserCreds: {
-                email: '',
-                password: ''
+              name: "",
+              email: "",
+              password: "",
+              confirmPassword: ""
             }
         })
     };
@@ -123,26 +126,40 @@ class NewUsers extends React.Component {
             <Nav />
             <ContainerDiv>
                 <Img src={svg} />
-                <H2>SIGN IN</H2>
-                <P>THANK YOU FOR SHOPPING WITH US!</P>
+                <H2>SIGN UP</H2>
+                <P>WHEN YOU SIGN UP YOU WILL GET 10% OFF YOUR FIRST ORDER!</P>
 
                 <Form onSubmit={this.handleSubmit}>
                     <Input 
                         type="text"
-                        placeholder="Name"
+                        placeholder="Full Name"
+                        value={this.state.name}
+                        onChange={this.handleChange}
+                        name='name'
+                    />
+                    <Input 
+                        type="text"
+                        placeholder="Email"
                         value={this.state.email}
                         onChange={this.handleChange}
                         name='email'
                     />
                     <Input 
-                        placeholder="Password"
                         type="text"
+                        placeholder="Password"
                         value={this.state.password}
                         onChange={this.handleChange}
                         name='password'
                     />
+                    <Input 
+                        placeholder="Confirm Password"
+                        type="text"
+                        value={this.state.confirmPassword}
+                        onChange={this.handleChange}
+                        name='CoNfrimPassword'
+                    />
                 </Form>
-                <Button onClick={this.handleSubmit}>SIGN IN <Span>
+                <Button onClick={this.handleSubmit}>SIGN UP <Span>
                 {/* <img src={arrow} */}
                     <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
                     </Span> </Button>

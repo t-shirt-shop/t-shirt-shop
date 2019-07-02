@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const H2 = styled.h2`
     padding-top: 15px; 
@@ -67,7 +68,9 @@ const DontForget = (props) => {
     return (
         <Div>
             <H2>DONT FORGET TO SIGN UP</H2>
-            <Button>SIGN UP</Button>
+            <Link to="/register">
+                <Button>SIGN UP</Button>
+            </Link>
             <P>IF YOU SIGN UP YOU GET AN <br/>ADDITIONAL 10% OFF</P>
         </Div>
     )
