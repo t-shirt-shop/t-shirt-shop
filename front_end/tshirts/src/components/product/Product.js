@@ -11,23 +11,20 @@ import LikeIcon from "./components/LikeIcon";
 import UserUploadGrid from "./components/UserUploadedGrid";
 import Footer from "../landingpage/Footer";
 import Reviews from "./components/Reviews";
-
-
+import {Link} from "react-router-dom";
 
 const Container = styled.div`
-background-color: rgba(242, 248, 248, 1);
-`
+  background-color: rgba(242, 248, 248, 1);
+`;
 
 const StickToBottom = styled.div`
-position: relative;
+  position: relative;
 
-
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-width: 100%;
-
-`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+`;
 
 const ColorText = styled.p`
   margin-top: 65%;
@@ -54,10 +51,9 @@ const ReviewText = styled.p`
 
 const Product = () => {
   return (
-    
     <Container>
-        <Nav />
-        
+      <Nav />
+
       <div>
         <Hero />
       </div>
@@ -69,24 +65,27 @@ const Product = () => {
         <Color />
       </div>
 
-      <SizeText><p>Size</p></SizeText>
+      <SizeText>
+        <p>Size</p>
+      </SizeText>
       <div className="sizes">
         <Size />
       </div>
       <Style />
-        <Quantity />
-        <StickToBottom>
-      <AddToCartButton />
-      <LikeIcon />
-        </StickToBottom>
-        <UserFilesText>User Uploaded Photos</UserFilesText>
-    <UserUploadGrid />
-    <ReviewText>Top Reviews</ReviewText>
-    <Reviews />
-    
-    <Footer />
+      <Quantity />
+      <StickToBottom>
+        <Link to="/cart-items">
+          <AddToCartButton />
+        </Link>
+        <LikeIcon />
+      </StickToBottom>
+      <UserFilesText>User Uploaded Photos</UserFilesText>
+      <UserUploadGrid />
+      <ReviewText>Top Reviews</ReviewText>
+      <Reviews />
+
+      <Footer />
     </Container>
-    
   );
 };
 

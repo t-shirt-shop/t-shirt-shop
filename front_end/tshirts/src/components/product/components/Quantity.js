@@ -27,7 +27,7 @@ font-weight: bolder;
 
 `
 
-let count = 0;
+let count = 1;
 
 const countUp = (count) => {return count++};  
 const countDown = (count) => {return count--}; 

@@ -20,7 +20,7 @@ function App() {
     	<Route exact path="/" component={Landing} />
     	<Route exact path="/shirts" component={Shirts} />
       {/* <Route path='/shirts/:id' component={SingleShirt} /> */}
-      <Route exact path='/shirts/1' component={ShirtCard} />
+      <Route exact path='/shirts/1' component={Product} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
     	<Route path="/product" component={Product} /> 
@@ -29,7 +29,6 @@ function App() {
       <Route path="/usersettings" component={UserSettings} />
       <Route exact path="/cart" component={Carts} /> 
       <Route exact path="/cart-items" component={CartWithItems} /> 
-      {/* ^^ Will change to the exact shirt name or products/shirt_name after skeleton is built  */}
     </div>
   );
 }

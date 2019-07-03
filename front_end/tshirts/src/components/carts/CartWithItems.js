@@ -2,11 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { getUsersCartItems } from "../../store/actions/cartsActions";
 import Nav from "../landingpage/Nav";
-
-import img from "../../assets/ProductBanner.png";
+import PriceBubble from "./PriceBubble";
+import img3 from "../../assets/ShirtGrid.png";
+import svg from "../../assets/SHOPPING_CART.svg";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 const Button = styled.button`
     background-image: linear-gradient(to right, #2FC145, #B4FF4E); 
@@ -35,6 +37,41 @@ const ContainerDiv = styled.div`
     margin: 25px 0;
     min-height: 605px;
     margin: 0;
+    height: 160px;
+`
+
+const CartItem = styled.div`
+	border-bottom: 1px solid #bec5c5;
+margin-top: 30px;
+position: absolute;
+width: 100%;
+display: flex;
+justify-content: space-between;
+background-color: white;
+max-height: 160px;
+
+box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.20);
+
+span {
+  color: red;
+  font-weight: bolder;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+`
+const Description = styled.div`
+width: 50%;
+text-align: start;
+p{
+  margin-top: -20px;
+  margin-bottom:21px;
+  :first-of-type{
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+}
+
 `
 
 const H2 = styled.h2`
@@ -58,9 +95,15 @@ const Span = styled.span`
     float: right;
 `
 const Img = styled.img`
-  margin-top: 40px;
+  height: 160px;
+  display: flex;
 `
-class CartWithItems extends React.Component {
+
+const SVG = styled.img`
+  margin-top: 40px;
+
+`
+class Carts extends React.Component {
   componentDidMount() {
     let id = localStorage.getItem('id')
     this.props.getUsersCartItems('1');
@@ -71,14 +114,34 @@ class CartWithItems extends React.Component {
       <div>
         <Nav />
         <ContainerDiv>
-          <img src={img} />
+
+          <SVG src={svg} />
           <H2>YOUR CART</H2>
-          <Button 
-            onClick={this.handleSubmit}>SIGN IN 
-            <Span>
-              <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
-            </Span> 
-          </Button>
+          <P>SUBTOTAL: $100</P>
+          <P>SHIPPING IS INCLUDED IN THE PRICE ABOVE</P>
+          <CartItem>
+
+          <Img src={img3} />
+          <PriceBubble />
+          <Description>
+          
+            <p>Fish Mask</p>
+            <p>Style: Men's Organic Cotton</p>
+            <p>Color: Black</p>
+            <p>Size: Medium</p>
+            <p>Quantity: 2</p>
+            <p>Individual Price: $50</p>
+          </Description>
+          <span>X</span>
+          </CartItem>
+          <Link to="/orders">
+            <Button 
+              onClick={this.handleSubmit}>PLACE ORDER
+              <Span>
+                <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
+              </Span> 
+            </Button>
+          </Link>
         </ContainerDiv>
       </div>)
   }
@@ -89,4 +152,4 @@ const mapStateToProps = state => ({
   user: state.user
 })
 
-export default connect(mapStateToProps, { getUsersCartItems})(CartWithItems);
+export default connect(mapStateToProps, { getUsersCartItems})(Carts);

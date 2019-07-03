@@ -1,8 +1,7 @@
 
-
-
-
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
@@ -45,18 +44,25 @@ margin-right: 20px;
 function Nav() {
   return (
     <Container>
+		<NavLink to="/">
       <Logo>
         Logo
       </Logo>
+			</NavLink>
 			
       <Title> 
 			{/* p-tags&htags too much styling applied */}
-			Gas Mask
+			Fish Mask
 			</Title>
 		<Icons>
-	
+		<NavLink to="/usersettings">
+
           <FontAwesomeIcon icon={faUser} />
+					</NavLink>
+					<NavLink to="/cart">
+
           <FontAwesomeIcon className="test" icon={faShoppingCart} />
+					</NavLink>
 		</Icons>
 
     </Container>

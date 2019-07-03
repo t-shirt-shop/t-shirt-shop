@@ -12,8 +12,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 position: absolute;
-left: 82%;
-bottom: -5%;
+right: 71%;
+bottom: 35%;
 p {
 	color: white;
 	text-align: center;
@@ -24,7 +24,7 @@ p {
 const PriceBubble = () => {
 	return ( 
 		<Bubble>
-	<p>$50</p>
+	<p>$100</p>
 		</Bubble>
 	 );
 }

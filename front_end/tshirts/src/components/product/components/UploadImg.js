@@ -46,7 +46,7 @@ class UploadImg extends Component {
         <ParentDiv key={id}>
           <Img src={img3} alt="gas-mask" />
         </ParentDiv>
-        ))};
+        ))}
       </DivContainer>
     );
   }
