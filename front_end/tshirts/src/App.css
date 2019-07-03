@@ -64,4 +64,54 @@
   margin: 10px;
   font-size: 20px;
 }
+.colors {
+  margin-left: 12px;
+  margin-top: -20px;
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+}
+.colors .gray {
+  background: #919794;
+  width: 30px;
+  height: 30px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+}
+.colors .black {
+  background: black;
+  width: 30px;
+  height: 30px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+}
+.colors .white {
+  background: white;
+  width: 30px;
+  height: 30px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+}
+.sizes {
+  margin-left: 20px;
+  margin-top: -20px;
+  display: flex;
+  width: 375px;
+  justify-content: space-around;
+  align-items: center;
+}
+.sizes .white {
+  width: 68px;
+  background: white;
+  height: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
 /*# sourceMappingURL=App.css.map */
