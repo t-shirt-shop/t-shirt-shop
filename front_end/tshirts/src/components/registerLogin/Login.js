@@ -5,7 +5,7 @@ import Nav from "../landingpage/Nav";
 import svg from "../../assets/SIGN_IN.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChevronCircleRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Button = styled.button`
