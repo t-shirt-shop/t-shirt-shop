@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import img3 from "../../../assets/ShirtGrid.png";
+import { Link } from "react-router-dom";
 
 const DivContainer = styled.div`
     display: flex;
@@ -58,9 +59,12 @@ class GridImage extends Component {
 
     return (
       <DivContainer>
+
       {images.map((image, id) => (
         <ParentDiv key={id}>
+          <Link to="/shirts/1">
           <Img src={img3} alt="gas-mask" />
+        </Link>
           <Div>
             <H5>Fish Mask</H5>
             <H3>$50</H3>

@@ -7,6 +7,7 @@ import svg from "../../assets/SHOPPING_CART.svg";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import {Link} from "react-router-dom";
 
 const Button = styled.button`
     background-image: linear-gradient(to right, #2FC145, #B4FF4E); 
@@ -74,12 +75,14 @@ class Carts extends React.Component {
           <Img src={svg} />
           <H2>YOUR CART</H2>
           <P>YOUR CART LOOKS EMPTY <br/> TRY ADDING SOME ITEMS TO IT...</P>
-          <Button 
-            onClick={this.handleSubmit}>SHOP ALL
-            <Span>
-              <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
-            </Span> 
-          </Button>
+          <Link to="/">
+            <Button 
+              onClick={this.handleSubmit}>SHOP ALL
+              <Span>
+                <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
+              </Span> 
+            </Button>
+          </Link>
         </ContainerDiv>
       </div>)
   }

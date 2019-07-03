@@ -27,8 +27,8 @@ function App() {
       {/* I (Bryce) have more routes in Orders Component. Should all routes be in App.js (here)? */}
       <Route path="/orders" component={Orders} />
       <Route path="/usersettings" component={UserSettings} />
-      <Route path="/cart" component={Carts} /> 
-      <Route path="/cart-items" component={CartWithItems} /> 
+      <Route exact path="/cart" component={Carts} /> 
+      <Route exact path="/cart-items" component={CartWithItems} /> 
       {/* ^^ Will change to the exact shirt name or products/shirt_name after skeleton is built  */}
     </div>
   );

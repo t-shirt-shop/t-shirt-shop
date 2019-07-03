@@ -73,7 +73,6 @@ class CartWithItems extends React.Component {
         <ContainerDiv>
           <img src={img} />
           <H2>YOUR CART</H2>
-          <P>YOUR CART LOOKS EMPTY <br/> TRY ADDING SOME ITEMS TO IT...</P>
           <Button 
             onClick={this.handleSubmit}>SIGN IN 
             <Span>

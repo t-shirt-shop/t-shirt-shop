@@ -7,6 +7,8 @@ import png from "../../assets/ProductBanner.png";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import {Link } from "react-router-dom";
+import CartWithItems from "../carts/CartWithItems";
 
 const Button = styled.button`
     background-image: linear-gradient(to right, #2FC145, #B4FF4E); 
@@ -80,13 +82,15 @@ class Carts extends React.Component {
         <ContainerDiv>
           
           <img src={png} />
-         
+         <Link to="/cart-items">
           <Button 
             onClick={this.handleSubmit}>ADD TO CART
             <Span>
               <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
             </Span> 
           </Button>
+         
+         </Link>
         </ContainerDiv>
       </div>)
   }
