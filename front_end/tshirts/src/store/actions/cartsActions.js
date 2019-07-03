@@ -21,7 +21,7 @@ export const getUsersCartItems = () => {
 			dispatch({type: 'GET_CART_ITEMS_SUCCESS', payload: res.data})
 		})
 		.catch(error => {
-			dispatch({type: 'GET_CART_ITEMS_ERROR', payload: res.data})
+			dispatch({type: 'GET_CART_ITEMS_ERROR', payload: error})
 		})
 	}
 }
