@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StatesList from './StatesList';
 
 class ShippingInformation extends Component {
 	constructor(props) {
@@ -27,12 +28,7 @@ class ShippingInformation extends Component {
 						</div>
 						<div className="input">
 							<p>State</p>
-							<select placeholder="Massachusetts">
-  								<option value="California">California</option>
-								<option value="Massachusetts">Massachusetts</option>
-  								<option value="Utah">Utah</option>
-  								<option value="Texas">Texas</option>
-							</select>
+							<StatesList />
 						</div>
 					</div>
 				</div>
