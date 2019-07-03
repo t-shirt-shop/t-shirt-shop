@@ -20,7 +20,10 @@ function Nav() {
                     <NavLink exact to="/login">
                         <FontAwesomeIcon icon={faUser} /> 
                     </NavLink>
-                </div><div className='icon'> <FontAwesomeIcon icon={faShoppingCart} /> </div>   
+                </div>
+                <NavLink to="cart">
+                    <div className='icon'> <FontAwesomeIcon icon={faShoppingCart} /> </div>   
+                </NavLink>
             </div>
         </div>
     );

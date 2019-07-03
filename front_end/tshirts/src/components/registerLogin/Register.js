@@ -86,10 +86,9 @@ class NewUsers extends React.Component {
         super(props);
         this.state = {
             RegisterUserCreds: {
-              name: "", //user_name
+              "user_name": "",
               email: "",
-              password: "",
-              confirmPassword: "" // does not have it on back end
+              password: ""
             }
         };
     }
@@ -107,15 +106,12 @@ class NewUsers extends React.Component {
         console.log(this.props)
         e.preventDefault();
         this.props.registerNewUser(this.state.LoginUserCreds)
-        .then(() => {
-            this.props.history.push("/shirts");
-         });
+        this.props.history.push("/shirts")
         this.setState({ 
             LoginUserCreds: {
               name: "",
               email: "",
-              password: "",
-              confirmPassword: ""
+              password: ""
             }
         })
     };
@@ -159,10 +155,12 @@ class NewUsers extends React.Component {
                         name='CoNfrimPassword'
                     />
                 </Form>
-                <Button onClick={this.handleSubmit}>SIGN UP <Span>
-                {/* <img src={arrow} */}
+                <Button 
+                  onClick={this.handleSubmit}>SIGN UP 
+                  <Span>
                     <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
-                    </Span> </Button>
+                  </Span> 
+                </Button>
             </ContainerDiv>
           </div>
         );

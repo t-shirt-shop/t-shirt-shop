@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { registerNewUser } from '../../store/actions/usersActions';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Button = styled.button`
