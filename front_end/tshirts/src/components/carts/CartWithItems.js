@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getUsersCartItems } from "../../store/actions/cartsActions";
 import Nav from "../landingpage/Nav";
 
-import svg from "../../assets/SHOPPING_CART.svg";
+import img from "../../assets/ProductBanner.png";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
@@ -60,7 +60,7 @@ const Span = styled.span`
 const Img = styled.img`
   margin-top: 40px;
 `
-class Carts extends React.Component {
+class CartWithItems extends React.Component {
   componentDidMount() {
     let id = localStorage.getItem('id')
     this.props.getUsersCartItems('1');
@@ -71,7 +71,7 @@ class Carts extends React.Component {
       <div>
         <Nav />
         <ContainerDiv>
-          <Img src={svg} />
+          <img src={img} />
           <H2>YOUR CART</H2>
           <P>YOUR CART LOOKS EMPTY <br/> TRY ADDING SOME ITEMS TO IT...</P>
           <Button 
@@ -90,4 +90,4 @@ const mapStateToProps = state => ({
   user: state.user
 })
 
-export default connect(mapStateToProps, { getUsersCartItems})(Carts);
+export default connect(mapStateToProps, { getUsersCartItems})(CartWithItems);

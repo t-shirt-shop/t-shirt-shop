@@ -75,7 +75,7 @@ class Carts extends React.Component {
           <H2>YOUR CART</H2>
           <P>YOUR CART LOOKS EMPTY <br/> TRY ADDING SOME ITEMS TO IT...</P>
           <Button 
-            onClick={this.handleSubmit}>SIGN IN 
+            onClick={this.handleSubmit}>SHOP ALL
             <Span>
               <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
             </Span> 
