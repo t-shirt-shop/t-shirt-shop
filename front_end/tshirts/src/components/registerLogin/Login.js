@@ -86,7 +86,7 @@ class NewUsers extends React.Component {
         super(props);
         this.state = {
             LoginUserCreds: {
-            email: "",
+            email: "", //needs to be user_name
             password: ""
             }
         };

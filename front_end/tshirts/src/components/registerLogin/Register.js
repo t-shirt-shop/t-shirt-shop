@@ -86,10 +86,10 @@ class NewUsers extends React.Component {
         super(props);
         this.state = {
             RegisterUserCreds: {
-              name: "",
+              name: "", //user_name
               email: "",
               password: "",
-              confirmPassword: ""
+              confirmPassword: "" // does not have it on back end
             }
         };
     }

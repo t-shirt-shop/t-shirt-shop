@@ -1,9 +1,41 @@
 import React from 'react';
-import {shirtsByCategory} from '../../store/actions/shirtsActions.js'
-import {registerNewUser, loginUser} from '../../store/actions/usersActions.js'
-import {getShirtsComments} from '../../store/actions/commentsActions.js'
+import {shirtsByCategory, getAllCatagories} from '../../store/actions/shirtsActions.js'
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+
+const DisplayCatagories = ({catagories, shirtsByCategory}) => {
+	return (
+		<div>
+			{catagories.map((category, i) => {
+			return (
+				<div key={i} onClick={()=> {shirtsByCategory(category.id)}}>
+					{category.category_name}
+				</div>
+				)
+			})}
+		</div>
+	)
+}
+
+const DisplayShirts = ({shirts, history}) => {
+	 return (
+	 		<div>
+	 			{shirts.map((shirt, i) => {
+	 				return (
+	 					<div key={i}>
+	 						<img src={shirt.image_url}></img>
+	 						<div>{shirt.shirt_name}</div>
+	 						<div>{shirt.description}</div>
+	 						<div 
+	 							onClick={() => {history.push(`/shirts/${shirt.id}`)}}>
+	 							view more
+	 						</div>
+	 					</div>
+	 				)
+	 			})}
+	 		</div>
+	 	)
+}
 
 class Shirts extends React.Component {
 	constructor(props){
@@ -12,16 +44,30 @@ class Shirts extends React.Component {
 	}
 
 	componentDidMount(){
-		this.props.shirtsByCategory(1)
-		this.props.getShirtsComments(1)
-		console.log(this.props)
+		this.props.getAllCatagories()
 	}
 
 	render() {
+
+		const {catagories, shirts} = this.props.shirts
+		const {shirtsByCategory, history} = this.props
+
+		console.log(this.props)
+
 		return (
 			<div>
-			<div>hello world</div>
-			<div><Link to='/'> to landing</Link></div>
+				<div><Link to='/'>to landing</Link></div>
+
+				<DisplayCatagories 
+					catagories={catagories} 
+					shirtsByCategory={shirtsByCategory}
+				/>
+
+				<DisplayShirts
+					shirts={shirts}
+					history={history}
+				/>
+
 			</div>
 		)
 	}
@@ -29,12 +75,8 @@ class Shirts extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		loading: state.shirts.loading,
-		error: state.shirts.error,
-		shirts: state.shirts.shirts,
-		users: state.users.user,
-		comments: state.comments.comments
+		shirts: state.shirts
 	}
 }
 
-export default connect(mapStateToProps, {shirtsByCategory, registerNewUser, loginUser, getShirtsComments})(Shirts);
+export default connect(mapStateToProps, {shirtsByCategory, getAllCatagories})(Shirts);
