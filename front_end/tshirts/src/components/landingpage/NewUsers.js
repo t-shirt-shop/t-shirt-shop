@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { registerNewUser } from '../../store/actions/usersActions';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -88,8 +88,6 @@ class NewUsers extends React.Component {
       };
 
     handleSubmit = e => {
-        console.log("should be routing!!!!!!!!!")
-        console.log(this.props)
         e.preventDefault();
         this.props.registerNewUser(this.state.registerUser)
         this.props.history.push("/shirts");
