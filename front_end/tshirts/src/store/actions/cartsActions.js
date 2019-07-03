@@ -13,15 +13,15 @@ export const addToCart = (shirt) => {
 	}
 }
 
-export const getUsersCartItems = () => {
+export const getUsersCartItems = (cart_id) => {
 	return dispatch => {
 		dispatch({type: 'GET_CART_ITEMS_START'})
-		axios.get('https://t-shirt-store123.herokuapp.com/shirt/cart')
+		axios.get('https://t-shirt-store123.herokuapp.com/shirt/cart', cart_id)
 		.then(res => {
 			dispatch({type: 'GET_CART_ITEMS_SUCCESS', payload: res.data})
 		})
 		.catch(error => {
-			dispatch({type: 'GET_CART_ITEMS_ERROR', payload: res.data})
+			dispatch({type: 'GET_CART_ITEMS_ERROR', payload: error})
 		})
 	}
 }

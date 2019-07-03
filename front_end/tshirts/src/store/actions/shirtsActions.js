@@ -13,6 +13,19 @@ export const shirtsByCategory = (id) => {
 	}
 }
 
+export const getSingleShirt = (id) => {
+	return dispatch => {
+		dispatch({type: 'GET_SINGLE_SHIRT'})
+		axios.get(`https://t-shirt-store123.herokuapp.com/tshirts/${id}`)
+		.then(res => {
+			dispatch({type: 'GET_SINGLE_SUCCESS', payload: res.data})
+		})
+		.catch(error => {
+			dispatch({type: 'GET_SINGLE_ERROR', payload: error})
+		})
+	}
+}
+
 export const getAllCatagories = () => {
 	return dispatch => {
 		dispatch({type: 'GET_CATEGORY_START'})
