@@ -29,8 +29,7 @@ const StyledButton = styled.button`
   border-radius: 30px;
   font-family: arial;
   font-weight: bold;
-  margin-left: -20px;
-
+  width: 250px;
 `;
 const Span = styled.span`
   float: right;

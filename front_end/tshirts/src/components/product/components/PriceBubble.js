@@ -12,7 +12,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 position: absolute;
-left: 80%;
+left: 82%;
 bottom: -5%;
 p {
 	color: white;

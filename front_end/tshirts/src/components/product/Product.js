@@ -4,24 +4,29 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Color from "./components/Options/Color";
 import Size from "./components/Options/Size";
+import Style from "./components/Options/Style";
 import AddToCartButton from "./components/AddToCartButton";
 import Quantity from "./components/Quantity";
 import LikeIcon from "./components/LikeIcon";
+import UserUploadGrid from "./components/UserUploadedGrid";
+import Footer from "../landingpage/Footer";
+import Reviews from "./components/Reviews";
 
 
 
 const Container = styled.div`
 background-color: rgba(242, 248, 248, 1);
-height: 100vh;
 `
 
 const StickToBottom = styled.div`
-position: absolute;
-bottom: 2%;
+position: relative;
+
+
 display: flex;
 align-items: center;
 justify-content: space-evenly;
 width: 100%;
+
 `
 
 const ColorText = styled.p`
@@ -33,6 +38,18 @@ const ColorText = styled.p`
 const SizeText = styled.p`
   display: flex;
   margin-left: 20px;
+`;
+
+const UserFilesText = styled.p`
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: -5px;
+`;
+
+const ReviewText = styled.p`
+  display: flex;
+  margin-left: 20px;
+  padding-bottom: 20px;
 `;
 
 const Product = () => {
@@ -56,11 +73,18 @@ const Product = () => {
       <div className="sizes">
         <Size />
       </div>
+      <Style />
         <Quantity />
         <StickToBottom>
       <AddToCartButton />
       <LikeIcon />
         </StickToBottom>
+        <UserFilesText>User Uploaded Photos</UserFilesText>
+    <UserUploadGrid />
+    <ReviewText>Top Reviews</ReviewText>
+    <Reviews />
+    
+    <Footer />
     </Container>
     
   );

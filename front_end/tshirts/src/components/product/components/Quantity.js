@@ -5,8 +5,8 @@ const Container = styled.div`
 display: flex;
 align-items: center;
 justify-content: flex-end;
-margin-right: 40px;
-margin-top: 15px;
+margin-right: 43px;
+margin-top: 30px;
 
 `
 const SubtractButton = styled.div`

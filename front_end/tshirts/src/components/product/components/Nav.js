@@ -34,7 +34,6 @@ font-weight: bold;
 const Icons = styled.div`
 display: flex;
 margin-top: 6px;
-padding-right: 30px;
 margin-right: 20px;
 
 .test {
