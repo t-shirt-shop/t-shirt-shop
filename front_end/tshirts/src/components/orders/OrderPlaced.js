@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import {getOrders} from '../../store/actions/ordersActions';
+import { connect } from "react-redux";
 import img from "../../assets/ORDER_PLACED.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
@@ -56,8 +58,22 @@ const Span = styled.span`
 const Div = styled.div`
   background: #F2F8F8;
 `
-const OrderPlaced = (	) => {
-	return ( 
+class OrderPlaced extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount(){
+    this.props.getOrders()
+  }
+
+  render () {
+
+    console.log("Props:", this.props.orders)
+    console.log("State:", this.state)
+  
+  return ( 
     <Div>
       <img src={img} alt="svgimage"/>
       <h1>ORDER PLACED</h1>
@@ -89,5 +105,12 @@ const OrderPlaced = (	) => {
     </Div> 
   );
 }
+}
 
-export default OrderPlaced;
+const mapStateToProps = (state) => {
+  return {
+    orders: state.orders
+  }
+}
+
+export default connect(mapStateToProps, {getOrders})(OrderPlaced);
