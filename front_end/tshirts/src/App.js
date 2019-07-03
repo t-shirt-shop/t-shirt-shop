@@ -9,7 +9,7 @@ import PrivateRoute from "./components/auth/PrivateRoute";
 import Login from './components/registerLogin/Login';
 import Register from './components/registerLogin/Register';
 import Orders from './components/orders/Orders';
-import UserSettings from './components/users/UserSettings';
+import UserSettings from './components/users/UserSettings.jsx';
 import Carts from './components/carts/Carts';
 
 function App() {
