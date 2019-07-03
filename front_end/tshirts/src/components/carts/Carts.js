@@ -4,7 +4,7 @@ import { getUsersCartItems } from "../../store/actions/cartsActions";
 
 class Carts extends React.Component {
   componentDidMount() {
-    this.props.getUsersCartItems();
+    this.props.getUsersCartItems({cart_id: 1});
   }
   render(){
     return(<div>
