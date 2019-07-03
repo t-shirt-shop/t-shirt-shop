@@ -86,8 +86,8 @@ class NewUsers extends React.Component {
         super(props);
         this.state = {
             LoginUserCreds: {
-            email: "", //needs to be user_name
-            password: ""
+              "user_name": "", //needs to be user_name
+              password: ""
             }
         };
     }
@@ -102,16 +102,12 @@ class NewUsers extends React.Component {
       };
 
     handleSubmit = e => {
-        console.log("should be routing!!!!!!!!!")
-        console.log(this.props)
         e.preventDefault();
         this.props.registerNewUser(this.state.LoginUserCreds)
-        .then(() => {
-            this.props.history.push("/shirts");
-         });
+        this.props.history.push("/shirts");
         this.setState({ 
             LoginUserCreds: {
-                email: '',
+                "username": '',
                 password: ''
             }
         })
@@ -142,10 +138,12 @@ class NewUsers extends React.Component {
                         name='password'
                     />
                 </Form>
-                <Button onClick={this.handleSubmit}>SIGN IN <Span>
-                {/* <img src={arrow} */}
+                <Button 
+                  onClick={this.handleSubmit}>SIGN IN 
+                  <Span>
                     <FontAwesomeIcon icon={faChevronCircleRight} size="xl"/>
-                    </Span> </Button>
+                  </Span> 
+                </Button>
             </ContainerDiv>
           </div>
         );
