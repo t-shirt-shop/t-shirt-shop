@@ -21,6 +21,7 @@ function App() {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
     	<Route path="/product" component={Product} /> 
+      {/* I (Bryce) have more routes in Orders Component. Should all routes be in App.js (here)? */}
       <Route path="/orders" component={Orders} />
       <Route path="/usersettings" component={UserSettings} />
       <Route path="/cart" component={Carts} /> 
