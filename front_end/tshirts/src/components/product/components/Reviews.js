@@ -24,7 +24,7 @@ p {
 
 const ReviewText = styled.p`
 margin-top: -65px;
-margin-left: -15px;
+margin-left: -70px;
 font-size:1rem;
 `
 const Reviews = () => {
