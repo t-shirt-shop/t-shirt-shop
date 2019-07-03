@@ -57,7 +57,28 @@ const Span = styled.span`
 `
 const Div = styled.div`
   background: #F2F8F8;
+  margin: 25px 0;
+  min-height: 605px;
+  margin: 0;
 `
+const H2 = styled.h2`
+    padding-top: 40px; 
+    margin: 0 auto;
+    font-family: arial;
+    font-weight: 700;
+    font-size: 4.7vh;
+`
+const P = styled.p`
+    padding-bottom: 15px; 
+    margin: 0 auto;
+    font-family: arial;
+    font-style: italic;
+    font-size: 2vh;
+    font-weight: 400;
+    line-height: 4vh;
+    align-content: center;
+`
+
 class OrderPlaced extends React.Component {
   constructor(props){
     super(props);
@@ -76,8 +97,8 @@ class OrderPlaced extends React.Component {
   return ( 
     <Div>
       <img src={img} alt="svgimage"/>
-      <h1>ORDER PLACED</h1>
-      <p>WHILE WE PREPARE YOUR ORDER PLEASE REVIEW THE SHIPPING ADDRESS AND ORDER DETAILS.</p>
+      <H2>ORDER PLACED</H2>
+      <P>WHILE WE PREPARE YOUR ORDER REVIEW <br/> THE SHIPPING ADDRESS AND ORDER DETAILS.</P>
 
       <form>
         Default Shipping Address:
@@ -93,7 +114,7 @@ class OrderPlaced extends React.Component {
 
       <p>To Add: Map over Item Cart Information here.</p>
 
-      <div style={{background: "#F2F8F8"}}>
+      <div>
         <StyledButton>CHANGE THE ADDRESS
           <Span><FontAwesomeIcon icon={faChevronCircleRight} size="lg"/></Span> 
         </StyledButton> 
