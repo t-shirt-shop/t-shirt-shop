@@ -1,5 +1,5 @@
 import React from 'react';
-import {getSingleShirt} from '../../store/actions/shirtsActions.js'
+import {getSingleShirt, shirtsByCategory, getAllCatagories} from '../../store/actions/shirtsActions.js'
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -49,6 +49,8 @@ class Shirts extends React.Component {
 
 	render() {
 
+		console.log(this.props)
+
 		const {catagories, shirts} = this.props.shirts
 		const {shirtsByCategory, history} = this.props
 
@@ -75,8 +77,8 @@ class Shirts extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		shirts: state.shirts.getSingleShirt
+		shirts: state.shirts
 	}
 }
 
-export default connect(mapStateToProps, {getSingleShirt})(Shirts);
+export default connect(mapStateToProps, {getSingleShirt, shirtsByCategory, getAllCatagories})(Shirts);

@@ -7,8 +7,6 @@ import {
   LOGIN_SUCCESS
 } from '../../store/actions/usersActions';
 
-
-
 //set initial state
 
 const initialState = {

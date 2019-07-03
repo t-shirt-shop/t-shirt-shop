@@ -11,6 +11,7 @@ export const registerNewUser = (creds) => {
     .then(res => {
       console.log(res)
       localStorage.setItem('token', res.data.token)
+      localStorage.setItem('id', res.data.id)
       dispatch({type: REGISTER_SUCCESS, payload: res.data})
     })
     .catch(error => {
@@ -28,10 +29,8 @@ export const loginUser = (creds) => {
     dispatch({type: LOGIN_START})
     axios.post(`https://t-shirt-store123.herokuapp.com/users/login`, creds)
     .then(res => {
-      localStorage.setItem(
-        'token',
-        res.data.token
-      )
+      localStorage.setItem('token',res.data.token)
+      localStorage.setItem('id', res.data.id)
       dispatch({type: LOGIN_SUCCESS, payload: res.data})
     })
     .catch(error => {

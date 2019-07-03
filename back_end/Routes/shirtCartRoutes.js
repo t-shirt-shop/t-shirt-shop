@@ -30,15 +30,15 @@ router.post('', (req, res) => {
 // Read
 // get all items from a users shopping cart
 //-------------------------------------------
-router.get('', (req, res) => {
+router.get('/:id', (req, res) => {
 
-	const {cart_id} = req.body
+	const {id} = req.params
 
 	db('users')
 		.join('shopping_cart', 'users.id', 'shopping_cart.user_id')
 		.join('shirt_cart', 'shirt_cart.cart_id', 'shopping_cart.id')
 		.join('tshirt', 'tshirt.id', 'shirt_cart.tshirt_id')
-		.where({cart_id})
+		.where({cart_id: id})
 		.select('tshirt_id',
 			'small_amount',
 			'medium_amount', 
