@@ -11,6 +11,7 @@ import Register from './components/registerLogin/Register';
 import Orders from './components/orders/Orders';
 import UserSettings from './components/users/UserSettings.jsx';
 import Carts from './components/carts/Carts';
+import CartWithItems from './components/carts/CartWithItems';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/orders" component={Orders} />
       <Route path="/usersettings" component={UserSettings} />
       <Route path="/cart" component={Carts} /> 
+      <Route path="/cart-items" component={CartWithItems} /> 
       {/* ^^ Will change to the exact shirt name or products/shirt_name after skeleton is built  */}
     </div>
   );
