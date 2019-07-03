@@ -1,6 +1,7 @@
 import React from 'react';
 import Landing from "./components/landingpage/Landing";
 import Shirts from "./components/shirts/Shirts";
+import SingleShirt from "./components/shirts/SingleShirt";
 import Product from "./components/product/Product";
 import './App.css';
 import { Route } from "react-router-dom";
@@ -12,7 +13,8 @@ function App() {
   return (
     <div className="App">
     	<Route exact path="/" component={Landing} />
-    	<Route path="/shirts" component={Shirts} />
+    	<Route exact path="/shirts" component={Shirts} />
+      <Route path='/shirts/:id' component={SingleShirt} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
     	<Route path="/product" component={Product} /> 
