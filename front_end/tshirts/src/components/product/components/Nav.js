@@ -18,16 +18,19 @@ const Container = styled.div`
 	justify-content: space-between;
 	align-items: flex-start;
 	font-size: 20px;
+	background-color: white;
 `;
 
 const Logo = styled.div`
 
 	margin-left: 20px;
-	color:red;
 
 
 `;
+const Title = styled.div`
+font-weight: bold;
 
+`
 const Icons = styled.div`
 display: flex;
 margin-top: 6px;
@@ -47,10 +50,10 @@ function Nav() {
         Logo
       </Logo>
 			
-      <div> 
+      <Title> 
 			{/* p-tags&htags too much styling applied */}
 			Gas Mask
-			</div>
+			</Title>
 		<Icons>
 	
           <FontAwesomeIcon icon={faUser} />
