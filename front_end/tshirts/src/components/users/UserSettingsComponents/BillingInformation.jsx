@@ -18,17 +18,17 @@ class BillingInformation extends Component {
 						<input type="text" placeholder="Theodor Seuss Geisel" />
 					</div>
 					<div className="input">
-						<p>Default Billing Information</p>
+						<p>Default Billing Address</p>
 						<input type="address" placeholder="1337 N Bluefish Lane, 13245" />
+					</div>
+					<div className="input">
+							<p>State</p>
+							<StatesList />
 					</div>
 					<div className="double">
 						<div className="input">
 							<p>Apt #</p>
 							<input type="apt" placeholder="1F" />
-						</div>
-						<div className="input">
-							<p>State</p>
-							<StatesList />
 						</div>
 					</div>
 				</div>
